@@ -24,11 +24,17 @@ def take_order(menus)
   order_number
 end
 
-puts 'bugカフェへようこそ！ご注文は？ 番号でどうぞ'
-order1 = take_order(DRINKS)
+def main
+  puts 'bugカフェへようこそ！ご注文は？ 番号でどうぞ'
+  order1 = take_order(DRINKS)
 
-puts 'フードメニューはいかがですか?'
-order2 = take_order(FOODS)
+  puts 'フードメニューはいかがですか?'
+  order2 = take_order(FOODS)
 
-total = FOODS[order1][:price] + DRINKS[order2][:price]
-puts "お会計は#{total}円になります。ありがとうございました！"
+  total = FOODS[order1][:price] + DRINKS[order2][:price]
+  puts "お会計は#{total}円になります。ありがとうございました！"
+end
+
+if __FILE__ == $PROGRAM_NAME
+  main
+end
