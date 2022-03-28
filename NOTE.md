@@ -1,4 +1,4 @@
-#
+# NOTE
 
 ## 登場人物
 
@@ -92,6 +92,7 @@ class Food {
 }
 class Order {
   Event
+  total_amount()
 }
 class OrderLine {
   Event
@@ -99,11 +100,6 @@ class OrderLine {
   item()
   quantity()
   price()
-}
-class Bill {
-  Event
-
-  total_amount()
 }
 
 Customer <|-- Order
